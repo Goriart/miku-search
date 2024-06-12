@@ -1,0 +1,203 @@
+*{
+	margin: 0;/*将所有的边距都设置为0*/
+	padding: 0;
+}
+@font-face {
+	font-family:'萝莉体第二版';
+	src: url(../css/萝莉体第二版.ttf);/*本地字体引用*/
+}
+body{
+	background: url(../img/1611692596_09.jpg);/*设置背景图片*/
+	background-size: 1920px; 937px;/*设置背景图片大小*/
+	background-repeat: no-repeat; /*不让背景图片平铺*/
+	background-position:center;
+	cursor:url(../img/miku1.png), auto;
+	/* background-size:cover; */
+	-webkit-user-select:none;  /* 禁止选中文本 */
+	user-select: none;
+}
+a {
+    cursor:url(../img/miku2.png), auto;
+	text-decoration: none;
+}
+.position{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0; top: 0; 
+}
+canvas{
+	width: 100%;
+	height: 100%;
+    filter:blur(1px);
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+img,#logo{
+	width: 100%;height: 100%;/*将图片撑满整个容器*/
+	border-radius: 10px;/*设置图片圆角*/
+	
+		-webkit-transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+}
+img:hover,#logo:hover{
+		-webkit-transition: all 0.3s ease 0s;
+		-moz-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
+		-moz-transform: translate(-5px,-5px);
+		-webkit-transform: translate(-5px,-5px);
+		-o-transform: translate(-5px,-5px);
+		-ms-transform: translate(-5px, -5px);
+		transform: translate(-2px,-2px);
+		-webkit-box-shadow: 5px 5px 15px rgba(67, 72, 84, 0.5);
+		-moz-box-shadow: 5px 5px 15px rgba(67, 72, 84, 0.5);
+		-o-box-shadow: 5px 5px 15px rgba(67, 72, 84, 0.5);
+		box-shadow: 5px 5px 15px rgba(67, 72, 84, 0.5);
+}
+#search-replace{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 30px;
+}
+#search-replace ul{
+	list-style-type: none;/* 取消前方圆点 */
+	display: flex;
+	margin: auto;
+}
+#search-replace li{
+	display: block;
+	float: left;
+}
+#search-replace button{
+	background-color: rgba(1, 0, 100, 0.4);
+	border-radius: 10px;
+	border:none;
+	width: 65px;
+	height: 30px;
+	font-size: 25px;
+	font-family: '萝莉体第二版';/*指定字体样式*/
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	align-items:center;
+}
+#search-replace button:hover{
+	background-color: rgba(230,230,230,0.4);
+}
+.time{
+	/* position: absolute; */
+	background-color: transparent;
+	height: 50px;
+	top: 40%;
+	color: white;
+	text-align: center;
+	margin: auto;
+	align-items:center;
+	line-height: 50px;
+	font-size: 50px;
+	font-family: '萝莉体第二版';/*指定字体样式*/
+}
+.time-outer{
+	display: flex;
+	align-items:center;/*设置内部元素垂直居中*/
+	height: 50px;
+}
+.search-outer{
+	display: flex;
+	align-items:center;/*设置内部元素垂直居中*/
+	height: 100px;
+}
+.outer{
+	/*overflow: auto;设置父类容器溢出*/
+	display: flex;
+	align-items:center;/*设置内部元素垂直居中*/
+	height: 150px;
+}
+
+.image{
+	width: 20%;height: 100%;float: left;/*设置容器的大小和容器的浮动方向*/
+}
+.text{
+	float: left; font-size: 50px;color: rgba(55,55,100,1);/*浮动方向，文字大小，文字颜色*/
+	 background-color: rgba(255,255,255,0.1); 
+	font-family: '萝莉体第二版';/*指定字体样式*/
+	margin: auto;/*设置为水平居中*/
+	border-radius: 10px;
+	backdrop-filter: blur(3px);/* 毛玻璃效果 */
+}
+.search-bar {
+	background-color: rgba(1, 0, 100, 0.4);
+	width: 100%;/*搜索框占据整个导航栏的宽度*/
+	border-radius: 30px 30px 3px 30px;/* 搜索框倒角 */
+	backdrop-filter: blur(3px);/* 毛玻璃效果 */
+	/*background: url(../img/miku03.png);
+	align-items:center;设置内部元素垂直居中*/
+	/*background-repeat: no-repeat; 不让背景图片平铺*/
+}
+#bar {
+	background-color:transparent;
+	border:none;/*搜索框透明*/
+	border-radius: 10px;
+	font-family: '萝莉体第二版';/*指定搜索框里的字体样式*/
+}
+#bar::-webkit-input-placeholder {
+ color: #8badcd;
+ font-size: 30px;
+ text-align: left;
+ }
+/* #bar:-moz-placeholder {
+ color: red;
+ font-size: 30px;
+ text-align: left;
+ }
+#bar:-ms-input-placeholder {
+ color: red;
+ font-size: 30px;
+ text-align: left;
+ } */
+.search-button{
+	width: 20%;/*搜索按钮占据整个导航栏的宽度*/
+	margin-right: 3px;
+}
+.search-bar>input{
+	outline: none;/* 去除搜索框的边框 */
+	padding-left: 20px;
+}
+.search-button>input{
+	outline: none;/* 去除按钮边框 */
+	border-radius: 30px 30px 3px 30px;/* 搜索按钮倒角 */
+}
+#banner,#navigation,#botton,#time{
+	width: 45%;/*将横幅和导航栏设置成宽度为浏览器宽度的45%*/
+}
+div.search-bar,div.search-button{
+	height: 55px;
+	float: left;
+	display: flex;
+	align-items:center;/*设置内部元素垂直居中*/
+}
+#banner,#navigation,#botton,#time{
+	margin: auto;/*将横幅和导航设置为水平居中*/
+}
+input{
+	height: 50px;
+	width: 100%;
+	font-size: 25px;/* 搜索框输入字体的大小 */
+	color: #a3fff0;/* 搜索框输入字体的颜色 */
+}
+#logo,.logo{
+	width: 55px;
+	height: 55px;
+	margin: 10px;
+	font-size: 35px;color: rgba(55,55,100,1);
+	backdrop-filter: blur(3px);/* 毛玻璃效果 */
+}
+/* #logo:hover,.logo:hover{
+	width: 55px;height: 55px;
+	margin: 5px;
+	background-color: rgba(1,0,100,0.3);
+	font-size: 40px;color: rgba(241,241,241,1);
+} */
