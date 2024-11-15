@@ -8,7 +8,7 @@
 }
 body{
 	background: url(../img/1611692596_09.jpg);/*设置背景图片*/
-	background-size: 1920px; 937px;/*设置背景图片大小*/
+	background-size: cover;/*设置背景图片大小*/
 	background-repeat: no-repeat; /*不让背景图片平铺*/
 	background-position:center;
 	cursor:url(../img/miku1.png), auto;
